@@ -8,7 +8,7 @@ export class ChildHobbyStep extends PickOptionStep {
 
   constructor(page: Page) {
     super(page);
-    this.nextStepButton = this.page.locator("[data-step-name] button");
+    this.nextStepButton = this.page.getByRole('button', { name: 'Продовжити' });
   }
 
   override async complete(): Promise<void> {

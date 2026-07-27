@@ -9,8 +9,8 @@ export class UserInfoNameStep extends PickOptionStep {
 
   constructor(page: Page) {
     super(page);
-    this.nextStepButton = this.page.locator("[data-step-name] button");
     this.parentNameInput = this.page.locator("[data-step-name] input");
+    this.nextStepButton = this.page.getByRole("button", { name: "Продовжити" });
   }
 
   override async complete(): Promise<void> {
